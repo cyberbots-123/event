@@ -150,7 +150,7 @@ const Registration = () => {
     // Validate the form
     if (validateForm()) {
       try {
-        const response = await fetch('http://localhost:4000/api/registrations', {
+        const response = await fetch('https://api.cyberbots.in/api/registrations', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
