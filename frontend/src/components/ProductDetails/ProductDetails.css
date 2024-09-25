@@ -1,0 +1,144 @@
+/* ProductDetails.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-slider {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-image-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.price-and-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.buy-now-btn {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-now-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Product Information */
+.product-info {
+    width: 100%;
+    text-align: center;
+}
+
+.product-info h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.product-info h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px;
+}
+
+.product-info ul li {
+    font-size: 1rem;
+    color: #555;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Video Buttons */
+.video-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.video-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.video-btn:hover {
+    background-color: #218838;
+}
+
+@media (min-width: 768px) {
+    .product-details {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .product-image-slider {
+        flex-basis: 45%;
+    }
+
+    .product-info {
+        flex-basis: 50%;
+        text-align: left;
+    }
+
+    .product-info ul {
+        gap: 15px;
+    }
+}

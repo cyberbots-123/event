@@ -1,0 +1,44 @@
+.blogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .blog-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Increased width for wider cards */
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* .blog-card:hover {
+    transform: scale(1.05);
+  } */
+  
+  .blog-image {
+    width: 100%;
+    height: 250px; /* Maintain reduced height for shorter cards */
+    object-fit: cover;
+  }
+  
+  .blog-content {
+    padding: 10px; /* Adjusted padding */
+  }
+  
+  .blog-title {
+    font-size: 1.2rem; /* Title font size */
+    margin: 0 0 8px; /* Reduced margin */
+  }
+  
+  .blog-description {
+    font-size: 0.9rem; /* Description font size */
+    color: #555;
+    line-height: 1.4; /* Line height for readability */
+  }
+  

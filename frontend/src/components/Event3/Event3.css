@@ -1,0 +1,190 @@
+
+.content-1, .content-2 {
+    position: relative; /* Allows positioning of the FaVideo icon */
+    flex: 1 1 calc(50% - 10px);
+    background: linear-gradient(135deg, #ff6600, #c7733b);
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.download_btn_2{
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* button:hover {
+    background-color: #ff8c00;
+} */
+.download_btn_2 svg {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.fa-video {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 36px; /* Increase the size of the icon */
+    color: #fff;
+    cursor: pointer;
+}
+.content-container_1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.content-1 {
+    flex: 1 1 48%; /* Content 1 on the left side */
+    background: linear-gradient(135deg, #ff6600, #c7733b);
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff; /* Set text color to white */
+}
+
+.content-2 {
+    flex: 1 1 48%; /* Content 2 on the right side */
+    background: linear-gradient(135deg, #ff6600, #c7733b);
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff; /* Set text color to white */
+}
+
+.text{
+    margin: 0;
+    margin-bottom: 10px;
+    color: #fff; /* Ensure paragraphs are white */
+}
+.header_2{
+    display: flex;
+    gap: 510px;
+    align-items: center;
+}
+.grd-3{
+    font-size: 30px;
+}
+
+
+/* Responsive Design */
+
+/* Large screens (desktops and laptops) */
+@media screen and (min-width: 1024px) {
+    .header_2 {
+        gap: 510px;
+    }
+
+    .content-1, .content-2 {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .cat-1 {
+        font-size: 24px;
+    }
+
+    .grd-3 {
+        font-size: 25px;
+    }
+}
+
+/* Medium screens (tablets and small laptops) */
+@media screen and (max-width: 1024px) {
+    .header_2 {
+        flex-direction: row;
+        gap: 300px
+        /* align-items: flex-start; */
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .content-1, .content-2 {
+        flex: 1 1 100%;
+    }
+
+    .cat-1, .grd-3 {
+        font-size: 22px;
+    }
+}
+
+/* Small screens (phones) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header_2 {
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cat-1 {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .grd-3 {
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .content-1, .content-2 {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .fa-video {
+        font-size: 30px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .download_btn_2 {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Extra small screens (very small phones) */
+@media screen and (max-width: 480px) {
+    .cat-1 {
+        font-size: 18px;
+    }
+
+    .grd-3 {
+        font-size: 16px;
+    }
+
+    .content-1, .content-2 {
+        padding: 10px;
+    }
+
+    .fa-video {
+        font-size: 28px;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .download_btn_2 {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

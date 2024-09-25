@@ -1,0 +1,74 @@
+.cybertrons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cybertron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.abt_img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.content {
+  max-width: 600px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.content p {
+  padding: 10px;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.Cyb_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.abt_img_1, .abt_img_2 {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  .cybertron {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .Cyb_img {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .Cyb_img {
+    flex-direction: row;
+    align-items: center;
+  }
+
+}
