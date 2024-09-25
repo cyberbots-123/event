@@ -108,7 +108,7 @@ const KitRegistration = () => {
       const priceValue = formData.price.replace(/[^\d.-]/g, ''); // Remove non-numeric characters
       console.log('Submitting form data:', { ...formData, price: priceValue }); // Log form data
       try {
-        const response = await fetch('http://localhost:4000/api/register', {
+        const response = await fetch('https://api.cyberbots.in/api/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
