@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './ProductDetails.css';
 import { zones } from '../../assets/assets'; // Adjust the path as necessary
 
@@ -17,6 +17,7 @@ const kits = {
         price: '₹ 1599',
         images: zones.Zone_1A_Images,
         makingVideo: 'https://www.mediafire.com/folder/8a4w0kod8mtnz/Zone_1A',
+        formLink: 'https://forms.gle/RxYJ8BhoYLvivXQU7',
     },
     Zone_1B: {
         title: 'Zone 1B - Quantum Assault Kit',
@@ -37,6 +38,7 @@ const kits = {
         price: '₹ 1599',
         images: zones.Zone_1B_Images,
         makingVideo: 'https://www.mediafire.com/folder/ktp58he7c7vhm/Zone_1B',
+        formLink: 'https://forms.gle/zfMZN5eXvmS7MhCj7',
     },
     Zone_2A: {
         title: 'Zone 2A - Ball Collector Bot Kit',
@@ -57,10 +59,11 @@ const kits = {
         price: '₹ 1999',
         images: zones.Zone_2A_Images,
         makingVideo: 'https://www.mediafire.com/folder/e4l4mxtarol5a/Zone_2A',
+        formLink: 'https://forms.gle/YS29PG9nMydPbYJRA',
     },
     Zone_2B: {
         title: 'Zone 2B - Relay Bot',
-        description: 'The Knight Quest Bot is an adventurous, Bluetooth-controlled robot designed to navigate through a maze and collect balls as part of its quest. Operated through a smartphone, the bot maneuvers swiftly through the maze, seeking out and retrieving scattered balls along the way',
+        description: 'The Knight Quest Bot is an adventurous, Bluetooth-controlled robot designed to navigate through a maze and collect balls as part of its quest. Operated through a smartphone, the bot maneuvers swiftly through the maze, seeking out and retrieving scattered balls along the way.',
         components: [
             '4 Wheel Chassis Set x1',
             'L298N Motor Driver x1',
@@ -78,6 +81,7 @@ const kits = {
         price: '₹ 1999',
         images: zones.Zone_2B_Images,
         makingVideo: 'https://www.mediafire.com/folder/70wilug41wz1w/Zone_2B',
+        formLink: 'https://forms.gle/rfTzpLmSDUGbGpG4A',
     },
     Zone_3: {
         title: 'Zone 3 - Drone Obstacle Course Kit',
@@ -96,15 +100,15 @@ const kits = {
         ],
         price: '₹ 2499',
         images: zones.Zone_3_Images,
-        makingVideo: 'https://www.mediafire.com/folder/mtt29sbf10mst/Zone_3',               
+        makingVideo: 'https://www.mediafire.com/folder/mtt29sbf10mst/Zone_3', 
+        formLink: 'https://forms.gle/aox5D7SVh4GTUB2v5',
     }
 };
 
 const ProductDetails = () => {
     const { zone } = useParams();
     const kit = kits[zone];
-    const navigate = useNavigate();
-    
+
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
@@ -122,12 +126,7 @@ const ProductDetails = () => {
     }
 
     const handleBuyNow = () => {
-        navigate('/kit-registration', {
-            state: { 
-                productName: kit.title, 
-                price: kit.price 
-            }
-        });
+        window.open(kit.formLink, '_blank');
     };
 
     return (

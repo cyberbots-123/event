@@ -24,7 +24,10 @@ const Navbar = () => {
             <a href="#events"><p>Event</p></a>
             <a href="#blogs"><p>Blogs</p></a>
             <a href="#contact"><p>Contact us</p></a>
-            <Link to="/register"> <button className='register-btn'>Register Now</button></Link>
+            {/* Updated register button to direct to Google Forms */}
+            <a href="https://forms.gle/YS8fy2jXSK73RFQJ9" target="_blank" rel="noopener noreferrer">
+              <button className='register-btn'>Register Now</button>
+            </a>
           </div>
 
           <div className='hamburger'>
@@ -39,14 +42,20 @@ const Navbar = () => {
           <a href="#events" onClick={toggleMenu}>Event</a>
           <a href="#blogs" onClick={toggleMenu}>Blogs</a>
           <a href="#contact" onClick={toggleMenu}>Contact us</a>
-          <Link to="/register" onClick={toggleMenu}><button className="register-btn">Register</button></Link>
+          {/* Updated register button in mobile menu */}
+          <a href="https://forms.gle/YS8fy2jXSK73RFQJ9" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
+            <button className="register-btn">Register</button>
+          </a>
         </div>
 
         <div className='center-content'>
           <h2 className='sud'>CYBERBOTS Join with SUDHARSANAM VIDYAASHRAM</h2>
           <h1>SV-CYBERTRON 2k'24</h1>        
           <p>THE MOST RESPONSIBLE<br/>ROBOTICS EVENT IN TAMILNADU</p>
-          <Link to="/register"><button>Register Now</button></Link>
+          {/* Updated register button in center content */}
+          <a href="https://forms.gle/YS8fy2jXSK73RFQJ9" target="_blank" rel="noopener noreferrer">
+            <button>Register Now</button>
+          </a>
         </div>
 
         <div className='prize'>
