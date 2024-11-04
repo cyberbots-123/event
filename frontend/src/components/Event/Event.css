@@ -1,0 +1,203 @@
+/* Base Styles */
+.container {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cat-1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.grd-1 {
+    font-size: 24px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0.5rem 2rem;
+}
+
+.content-1, .content-2 {
+    position: relative; /* Allows positioning of the FaCartShopping icon */
+    flex: 1 1 calc(50% - 10px);
+    background: linear-gradient(135deg, #ff6600, #c7733b);
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* Button Styles */
+.download_btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.download_btn svg {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+/* Shopping Icon */
+.fa-shop {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Text Styles */
+.text {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Icons Container - Added space between buttons */
+.icons_ {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Increased the gap between buttons */
+    margin-top: 10px; /* Added space at the top */
+}
+
+/* Responsive Design */
+
+/* Large screens (desktops and laptops) */
+@media screen and (min-width: 1024px) {
+    .header {
+        justify-content: center; /* Center the content horizontally */
+        gap: 20px;
+    }
+
+    .cat-1 {
+        font-size: 26px;
+    }
+
+    .grd-1 {
+        font-size: 25px;
+        text-align: center;
+        margin-right: 150px;
+        flex: 1;
+    }
+
+    .content-container {
+        flex-direction: row; /* Ensure content stays side by side */
+    }
+
+    .content-1, .content-2 {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+/* Medium screens (tablets and small laptops) */
+@media screen and (max-width: 1024px) {
+    .header {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .content-container {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .content-1, .content-2 {
+        flex: 1 1 100%; /* Make content full-width */
+    }
+
+    .cat-1, .grd-1 {
+        font-size: 22px;
+    }
+}
+
+/* Small screens (phones, under 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cat-1 {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .grd-1 {
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .content-1, .content-2 {
+        flex: 1 1 100%;
+        margin-bottom: 20px; /* Add spacing between stacked items */
+    }
+
+    .fa-shop {
+        font-size: 30px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .download_btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Extra small screens (very small phones) */
+@media screen and (max-width: 480px) {
+    .cat-1 {
+        font-size: 18px;
+    }
+
+    .grd-1 {
+        font-size: 16px;
+    }
+
+    .content-1, .content-2 {
+        padding: 10px;
+    }
+
+    .fa-shop {
+        font-size: 28px;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .download_btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

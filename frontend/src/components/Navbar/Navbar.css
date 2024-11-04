@@ -1,0 +1,382 @@
+/* Overall container for the navbar */
+.set1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Style for the banner image */
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: blur(4px);
+}
+
+/* Style for the navigation container */
+.nav-links {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Style for the logo */
+.nav-links img {
+  height: 50px;
+}
+
+/* Style for the navigation links container */
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.nav-content a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-content p {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease-in;
+}
+
+/* Style for the register button */
+.register-btn {
+  padding: 8px 25px;
+  color: white;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+/* Hover effect for the register button */
+.register-btn:hover {
+  background-color: #cc5200;
+  color: #ffffff;
+}
+
+/* Style for the content in the middle of the banner */
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-100%, -50%);
+  z-index: 2;
+  text-align: left;
+  color: white;
+  opacity: 0;
+  animation: slideIn 1s forwards 0.5s;
+}
+
+.center-content h1 {
+  font-size: 100px;
+}
+
+.center-content p {
+  font-size: 24px;
+}
+
+.center-content button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+.center-content button:hover {
+  background-color: #cc5200;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-100%, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+/* Style for the prize section */
+.prize {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  background: linear-gradient(135deg, #ff6600, #c7733b);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: right;
+  width: 440px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.prize p {
+  margin: 10px 0;
+  font-size: 30px;
+  line-height: 1.5;
+  transition: color 0.3s ease-in;
+}
+
+/* Highlight style for cash prize text */
+.prize p.highlight {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d42f2f;
+}
+
+/* Hover effect for prize text */
+.prize p:hover {
+  color: whitesmoke;
+}
+
+/* Mobile menu specific styles */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translateX(0);
+}
+
+.mobile-menu a,
+.mobile-menu .register-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mobile-menu a:hover,
+.mobile-menu .register-btn:hover {
+  color: #ffcc00;
+}
+
+/* Close icon */
+.close-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+}
+
+.hamburger-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Style for the event announcement */
+.sud {
+  position: relative;
+  top: 40px;
+  left: 60px;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+@media (min-width: 1024px) {
+  .center-content h1 {
+    font-size: 79px;
+  }
+
+  .center-content p {
+    font-size: 24px;
+  }
+
+  .prize p {
+    font-size: 30px;
+  }
+  
+  .sud {
+    font-size: 21px;
+    padding: 7px 14px;
+    left: 0
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .nav-content {
+    gap: 30px;
+  }
+
+  .center-content h1 {
+    font-size: 60px;
+  }
+
+  .center-content p {
+    font-size: 18px;
+  }
+
+  .prize p {
+    font-size: 20px;
+  }
+  
+  .sud {
+    font-size: 16px;
+    padding: 7px 14px;
+    left: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    justify-content: space-between;
+  }
+
+  .nav-content {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .center-content {
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -45%);
+  }
+
+  .center-content h1 {
+    font-size: 41px;
+  }
+
+  .center-content p {
+    font-size: 14px;
+  }
+
+  .center-content button {
+    font-size: 18px;
+  }
+
+  .prize {
+    width: 43%;
+    padding: 15px;
+  }
+
+  .prize p {
+    font-size: 15px;
+  }
+  
+  .sud {
+    font-size: 12px;
+    padding: 5px 6px;
+    left: 0px;
+    margin: 0 0 15px 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .nav-links {
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    gap: 10px;
+  }
+
+  .center-content {
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+  }
+
+  .center-content h1 {
+    font-size: 23px;
+  }
+
+  .center-content p {
+    font-size: 14px;
+  }
+
+  .center-content button {
+    font-size: 16px;
+  }
+
+  .prize {
+    width: 83%;
+    /* padding: 10px; */
+  }
+
+  .prize p {
+    font-size: 16px;
+  }
+  
+  .sud {
+    font-size:9px;
+    padding: 5px 10px;
+    left: -10px;
+    top: 20px;
+    max-width: 90%;
+  }
+  .log{
+    width: 37%;
+  }
+}
+
+/* @media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+} */
