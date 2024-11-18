@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
 
         <div className='prize'>
-          <p><b>Win Cash Prizes Worth ₹ 10000!</b></p>
+          <p><b>Win Cash Prizes Worth ₹ 100000!</b></p>
           <p><b>Showcase Your Robotics Skills on a Grand Stage!</b></p>
         </div>
       </div>
