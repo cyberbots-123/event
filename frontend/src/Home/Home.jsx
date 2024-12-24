@@ -17,7 +17,7 @@ import Partner from '../components/Partner/Partner'
 const Home = () => {
 
   const registrationStartDate = '2024-09-26T18:00:00';
-  const registrationEndDate = '2024-12-20T18:00:00';
+  const registrationEndDate = '2025-01-10T18:00:00';
   return (
     <>
     <Navbar/>
